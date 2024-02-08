@@ -1,0 +1,23 @@
+<div class="lista-de-tarefas">
+    <label for="novaTarefa">Descrição da Tarefa:</label>
+    <input type="text" id="novaTarefa" [(ngModel)]="novaTarefa" placeholder="Nova Tarefa" />
+
+    <label for="dataTarefa">Data da Tarefa:</label>
+    <input id="dataTarefa" type="date" [(ngModel)]="dataTarefa" />
+
+    <label for="tagTarefa">Tag da Tarefa:</label>
+    <select id="tagTarefa" [(ngModel)]="novaTag">
+        <option *ngFor="let tag of tags" [value]="tag">{{tag}}</option>
+    </select>
+
+    <button (click)="adicionarTarefa(novaTarefa, dataTarefa, novaTag)">Adicionar</button>
+
+<div *ngFor="let tarefa of obterTarefasAtivas()">
+    <div class="tarefa-item">
+      <app-tarefa [tarefa]="tarefa" (tarefaConcluida)="concluirTarefa($event)"></app-tarefa>
+      <p class="descricao">{{ tarefa.descricao }}</p>
+      <p class="data">Data: {{ tarefa.data | date:'dd/MM/yyyy' }}</p>
+      <p class="tag">Tag: {{ tarefa.tag }}</p>
+    </div>
+  </div>  
+</div>

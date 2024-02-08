@@ -1,0 +1,82 @@
+/* lista-de-tarefas.component.css */
+.lista-de-tarefas {
+  max-width: 400px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.input-container button {
+  margin-left: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.tarefa {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  padding: 8px;
+  background-color: #fff;
+}
+
+.tarefa input {
+  margin-right: 10px;
+}
+
+.tarefa .descricao {
+  flex: 1;
+  font-size: 16px;
+}
+
+.tarefa.concluida {
+  background-color: #f0f0f0;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select {
+  margin-bottom: 16px;  
+}
+
+.tarefa-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.descricao {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.data, .tag {
+  font-size: 14px;
+  color: #555;
+}
+
+.tag {
+  margin-left: auto;
+}
